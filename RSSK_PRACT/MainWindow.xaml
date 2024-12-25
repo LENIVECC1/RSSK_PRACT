@@ -1,0 +1,48 @@
+﻿<Window x:Class="RSSK_PRACT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RSSK_PRACT"
+        mc:Ignorable="d"
+        Title="ПРОСТОЙ КАЛЬКУЛЯТОР" MinHeight="450" MinWidth="800" Height="450" Width="800">
+    <Grid Background="Bisque">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="2" Grid.Row="2">
+
+            <Button x:Name="SUMMA" Click="SUMMA_Click" Grid.Column="2" Grid.Row="2" Content="СУММА"/>
+            <Button x:Name="UMN" Click="UMN_Click" Grid.Column="2" Grid.Row="3" Content="УМНОЖЕНИЕ"/>
+            <Button x:Name="DELEN" Click="DELEN_Click" Grid.Column="2" Grid.Row="4" Content="ДЕЛЕНИЕ"/>
+        </StackPanel>
+
+        <Button x:Name="EXIT" Click="EXIT_Click" Grid.Column="5" Grid.Row="5" Content="ВЫХОД"/>
+        <Button x:Name="ABOUT" Click="ABOUT_Click" Grid.Column="4" Grid.Row="5" Content="О ПРОГРАММЕ"/>
+        <Button x:Name="CLEAR" Click="CLEAR_Click" Grid.Column="3" Grid.Row="5" Content="ОЧИСТКА"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="2" Grid.RowSpan="2">
+            <Label Content="ЧИСЛО 1"/>
+            <TextBox x:Name="TEXT1" TextChanged="TEXT1_TextChanged"  />
+            <Label Content="ЧИСЛО 2"/>
+            <TextBox x:Name="TEXT2" TextChanged="TEXT2_TextChanged" />
+        </StackPanel>
+        <TextBox IsReadOnly="True"  x:Name="REZ" Grid.Column="3" Grid.Row="2"/>
+
+    </Grid>
+</Window>
